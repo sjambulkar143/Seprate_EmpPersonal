@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_nauuYFmqEe2uLePG0oJ8Dw" targetNamespace="http://tns.tibco.com/bw/composite/Emp_Personal2" name="Emp_Personal2" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_ez9a8lmsEe2uLePG0oJ8Dw" name="emp_personal" promote="ComponentEmp_PersonalRest/emp_personal">
+    <sca:interface.wsdl xmi:id="_ez-CAlmsEe2uLePG0oJ8Dw" interface="http://xmlns.example.com/20221101113125PLT#wsdl.interface(emp_personal)" scaext:wsdlLocation="../Processes/emp_personal2/Emp_PersonalRest.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_e0OgsFmsEe2uLePG0oJ8Dw" name="RestService" path="/emp_personal" docBasePath="http://localhost:7777/Emp_Personal2" docResourcePath="emp_Personal" basePath="/" connector="commonlog.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/emp_personal2.Emp_PersonalRest-emp_Personal.json">
+      <operation xmi:id="_e0fmcFmsEe2uLePG0oJ8Dw" operationName="post" nickname="post-emp_personal" httpMethod="POST" notes="postEmp_Personal" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_e0OgsVmsEe2uLePG0oJ8Dw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_e0fmcVmsEe2uLePG0oJ8Dw" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_pBMV4FmqEe2uLePG0oJ8Dw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBROYFmqEe2uLePG0oJ8Dw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBU4wFmqEe2uLePG0oJ8Dw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBYjIFmqEe2uLePG0oJ8Dw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBcNgFmqEe2uLePG0oJ8Dw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBhGAFmqEe2uLePG0oJ8Dw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBmlkFmqEe2uLePG0oJ8Dw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBvIcFmqEe2uLePG0oJ8Dw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pBzZ4FmqEe2uLePG0oJ8Dw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_niLaMFmqEe2uLePG0oJ8Dw" name="ComponentEmp_PersonalRest" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_niLaMVmqEe2uLePG0oJ8Dw" processName="emp_personal2.Emp_PersonalRest"/>
+    <sca:service xmi:id="_ez9a8FmsEe2uLePG0oJ8Dw" name="emp_personal">
+      <sca:interface.wsdl xmi:id="_ez9a8VmsEe2uLePG0oJ8Dw" interface="http://xmlns.example.com/20221101113125PLT#wsdl.interface(emp_personal)" scaext:wsdlLocation="../Processes/emp_personal2/Emp_PersonalRest.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

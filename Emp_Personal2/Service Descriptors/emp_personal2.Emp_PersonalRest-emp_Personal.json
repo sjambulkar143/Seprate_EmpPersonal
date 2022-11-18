@@ -1,0 +1,107 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "emp_Personal",
+    "description" : "emp_Personal service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/emp_personal" : {
+      "post" : {
+        "summary" : "postEmp_Personal",
+        "description" : "postEmp_Personal",
+        "operationId" : "post-emp_personal",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmpPersonalReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a EmpPersonalRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/EmpPersonalRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "EmpPersonalRes" : {
+      "type" : "object",
+      "properties" : {
+        "ResponseMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpPersonalreQ" : {
+      "type" : "object",
+      "required" : [ "ALTERNATEMOBILE", "EMPPERSONALID" ],
+      "properties" : {
+        "EMPPERSONALID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "EMPNAME" : {
+          "type" : "string"
+        },
+        "EMPMIDDLENAME" : {
+          "type" : "string"
+        },
+        "EMPLASTNAME" : {
+          "type" : "string"
+        },
+        "MOBILENUMBER" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ALTERNATEMOBILE" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "DOB" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "AGE" : {
+          "type" : "string"
+        },
+        "MARRIGESTATUS" : {
+          "type" : "string"
+        },
+        "AADHARNUMBER" : {
+          "type" : "string"
+        },
+        "PANNUMBER" : {
+          "type" : "string"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpPersonalReq" : {
+      "type" : "object",
+      "properties" : {
+        "EmpPersonalreQ" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EmpPersonalreQ",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

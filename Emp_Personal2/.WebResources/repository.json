@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/emp_personal2.Emp_PersonalRest-emp_Personal.json",
+        "type": "generated"
+    }]
+}

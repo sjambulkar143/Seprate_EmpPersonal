@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/Emp_Personal2/Service Descriptors/emp_personal2.Emp_PersonalRest-emp_Personal.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.EniqueSolutions/EmployeePOC/emppersonal"
+}]}
